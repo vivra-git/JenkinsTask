@@ -1,0 +1,25 @@
+Started by GitHub push by vivra-git
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/T8-HelloWorldGitTrigger
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/vivra-git/hello-world-java.git
+ > git init /var/lib/jenkins/workspace/T8-HelloWorldGitTrigger # timeout=10
+Fetching upstream changes from https://github.com/vivra-git/hello-world-java.git
+ > git --version # timeout=10
+ > git fetch --tags --progress -- https://github.com/vivra-git/hello-world-java.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/vivra-git/hello-world-java.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/vivra-git/hello-world-java.git # timeout=10
+Fetching upstream changes from https://github.com/vivra-git/hello-world-java.git
+ > git fetch --tags --progress -- https://github.com/vivra-git/hello-world-java.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision ececee63eb12ba55822952caa25423ddf065d603 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f ececee63eb12ba55822952caa25423ddf065d603 # timeout=10
+Commit message: "Git Trigger Task *"
+First time build. Skipping changelog.
+[T8-HelloWorldGitTrigger] $ /bin/sh -xe /tmp/jenkins5197075495431438289.sh
++ javac HelloWorld.java
+Finished: SUCCESS
