@@ -1,0 +1,24 @@
+Started by user admin
+Running as SYSTEM
+Building remotely on vslave1 in workspace /home/ubuntu/workspace/T10-PetClinicCompile
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/vivra-git/spring-petclinic.git
+ > git init /home/ubuntu/workspace/T10-PetClinicCompile # timeout=10
+Fetching upstream changes from https://github.com/vivra-git/spring-petclinic.git
+ > git --version # timeout=10
+ > git fetch --tags --progress -- https://github.com/vivra-git/spring-petclinic.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/vivra-git/spring-petclinic.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/vivra-git/spring-petclinic.git # timeout=10
+Fetching upstream changes from https://github.com/vivra-git/spring-petclinic.git
+ > git fetch --tags --progress -- https://github.com/vivra-git/spring-petclinic.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 5a80b2f96c9f58e769c4bea0a4dda1f7f4b8d623 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 5a80b2f96c9f58e769c4bea0a4dda1f7f4b8d623 # timeout=10
+Commit message: "change to vivra-git in git name"
+ > git rev-list --no-walk 12a8621a695071867cc8f7f9e42fe637b60522ed # timeout=10
+Triggering a new build of T11-PetClinicTest
+Finished: SUCCESS
