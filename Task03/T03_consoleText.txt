@@ -1,0 +1,9 @@
+Started by user admin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/HellowWorld
+[HellowWorld] $ /bin/sh -xe /tmp/jenkins7158320078469557002.sh
++ echo Hello World
+Hello World
++ echo Welcome to Jenkins
+Welcome to Jenkins
+Finished: SUCCESS
