@@ -1,0 +1,11 @@
+Started by user admin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/HelloWorldJava
+[HelloWorldJava] $ /bin/sh -xe /tmp/jenkins12974196761370680651.sh
++ git clone https://github.com/AnjuMeleth/hello-world-java.git
+Cloning into 'hello-world-java'...
++ cd hello-world-java
++ javac HelloWorld.java
++ java HelloWorld
+Hello world!
+Finished: SUCCESS
