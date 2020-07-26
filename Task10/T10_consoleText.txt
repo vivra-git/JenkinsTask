@@ -1,0 +1,127 @@
+Started by user admin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/T10-PetClinicCompile
+No credentials specified
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/vivra-git/spring-petclinic.git # timeout=10
+Fetching upstream changes from https://github.com/vivra-git/spring-petclinic.git
+ > git --version # timeout=10
+ > git fetch --tags --progress -- https://github.com/vivra-git/spring-petclinic.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 12a8621a695071867cc8f7f9e42fe637b60522ed (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 12a8621a695071867cc8f7f9e42fe637b60522ed # timeout=10
+Commit message: "Rename Jenkinsfile_CD to Jenkinsfile"
+ > git rev-list --no-walk 12a8621a695071867cc8f7f9e42fe637b60522ed # timeout=10
+[T10-PetClinicCompile] $ /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/M3/bin/mvn compile
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------< org.springframework.samples:spring-petclinic >------------
+[INFO] Building petclinic 2.1.0.BUILD-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:prepare-agent (default) @ spring-petclinic ---
+[INFO] argLine set to -javaagent:/var/lib/jenkins/.m2/repository/org/jacoco/org.jacoco.agent/0.8.2/org.jacoco.agent-0.8.2-runtime.jar=destfile=/var/lib/jenkins/workspace/T10-PetClinicCompile/target/jacoco.exec
+[INFO] 
+[INFO] --- git-commit-id-plugin:2.2.5:revision (default) @ spring-petclinic ---
+[INFO] dotGitDirectory /var/lib/jenkins/workspace/T10-PetClinicCompile/.git
+[INFO] git.build.user.name 
+[INFO] git.build.user.email 
+[INFO] Using environment variable based branch name. GIT_BRANCH = origin/master
+[INFO] git.branch origin/master
+[INFO] --always = true
+[INFO] --dirty = -dirty
+[INFO] --abbrev = 7
+[INFO] Tag refs [[Ref[refs/tags/1.5.x=c36452a2c34443ae26b4ecbba4f149906af14717]]]
+[INFO] Created map: [{}]
+[INFO] evalCommit is [12a8621a695071867cc8f7f9e42fe637b60522ed]
+[INFO] git.commit.id.describe 12a8621
+[INFO] git.commit.id 12a8621a695071867cc8f7f9e42fe637b60522ed
+[INFO] git.commit.id.abbrev 12a8621
+[INFO] git.dirty false
+[INFO] git.commit.user.name AnjuMeleth
+[INFO] git.commit.user.email 46922680+AnjuMeleth@users.noreply.github.com
+[INFO] git.commit.message.full Rename Jenkinsfile_CD to Jenkinsfile
+[INFO] git.commit.message.short Rename Jenkinsfile_CD to Jenkinsfile
+[INFO] git.commit.time 2020-05-14T06:04:23+0000
+[INFO] git.remote.origin.url https://github.com/vivra-git/spring-petclinic.git
+[INFO] git.tags 
+[INFO] evalCommit is [12a8621a695071867cc8f7f9e42fe637b60522ed]
+[INFO] Tag refs [[Ref[refs/tags/1.5.x=c36452a2c34443ae26b4ecbba4f149906af14717]]]
+[INFO] Created map: [{}]
+[INFO] git.closest.tag.name 
+[INFO] evalCommit is [12a8621a695071867cc8f7f9e42fe637b60522ed]
+[INFO] Tag refs [[Ref[refs/tags/1.5.x=c36452a2c34443ae26b4ecbba4f149906af14717]]]
+[INFO] Created map: [{}]
+[INFO] git.closest.tag.commit.count 
+[INFO] git.total.commit.count 732
+[INFO] git.build.time 2020-07-25T09:39:56+0000
+[INFO] git.build.version 2.1.0.BUILD-SNAPSHOT
+[INFO] git.build.host ip-172-31-12-10
+[INFO] git.build.number 2
+[INFO] git.commit.id.describe-short 12a8621
+[INFO] found property git.tags
+[INFO] found property git.closest.tag.commit.count
+[INFO] found property git.build.version
+[INFO] found property git.commit.user.name
+[INFO] found property git.commit.id.abbrev
+[INFO] found property git.branch
+[INFO] found property git.build.host
+[INFO] found property git.commit.id.describe-short
+[INFO] found property git.total.commit.count
+[INFO] found property git.build.number
+[INFO] found property git.commit.id.describe
+[INFO] found property git.build.user.email
+[INFO] found property git.commit.id
+[INFO] found property git.commit.message.short
+[INFO] found property git.commit.user.email
+[INFO] found property git.closest.tag.name
+[INFO] found property git.commit.time
+[INFO] found property git.build.time
+[INFO] found property git.build.user.name
+[INFO] found property git.dirty
+[INFO] found property git.commit.message.full
+[INFO] found property git.remote.origin.url
+[INFO] Reading existing properties file [/var/lib/jenkins/workspace/T10-PetClinicCompile/target/classes/git.properties] (for module petclinic)...
+[INFO] Writing properties file to [/var/lib/jenkins/workspace/T10-PetClinicCompile/target/classes/git.properties] (for module petclinic)...
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.1.1.RELEASE:build-info (default) @ spring-petclinic ---
+[INFO] 
+[INFO] --- wro4j-maven-plugin:1.8.0:run (default) @ spring-petclinic ---
+[INFO] /var/lib/jenkins/workspace/T10-PetClinicCompile/src/main/less
+[INFO] Executing the mojo: 
+[INFO] Wro4j Model path: /var/lib/jenkins/workspace/T10-PetClinicCompile/src/main/wro/wro.xml
+[INFO] targetGroups: null
+[INFO] minimize: true
+[INFO] ignoreMissingResources: null
+[INFO] parallelProcessing: false
+[INFO] buildDirectory: /var/lib/jenkins/workspace/T10-PetClinicCompile/target
+[INFO] destinationFolder: /var/lib/jenkins/workspace/T10-PetClinicCompile/target
+[INFO] cssDestinationFolder: /var/lib/jenkins/workspace/T10-PetClinicCompile/target/classes/static/resources/css
+[INFO] The following groups will be processed: [petclinic]
+[INFO] folder: /var/lib/jenkins/workspace/T10-PetClinicCompile/target/classes/static/resources/css
+[INFO] processing group: petclinic.css
+[WARNING] Less warnings are:
+[WARNING] 10:1 Cannot link source map. Css result location is not know and could not be deduced from input less source..
+[INFO] file size: petclinic.css -> 152399 bytes
+[INFO] /var/lib/jenkins/workspace/T10-PetClinicCompile/target/classes/static/resources/css/petclinic.css (152399 bytes)
+[INFO] folder: /var/lib/jenkins/workspace/T10-PetClinicCompile/target
+[INFO] processing group: petclinic.js
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ spring-petclinic ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] Copying 35 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ spring-petclinic ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 25 source files to /var/lib/jenkins/workspace/T10-PetClinicCompile/target/classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.415 s
+[INFO] Finished at: 2020-07-25T09:40:01Z
+[INFO] ------------------------------------------------------------------------
+Finished: SUCCESS
