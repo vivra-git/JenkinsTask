@@ -1,0 +1,561 @@
+Started by user admin
+Obtained Jenkinsfile from git https://github.com/vivra-git/spring-petclinic.git
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Still waiting to schedule task
+‘vslave1’ is offline
+Running on vslave1 in /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+No credentials specified
+Fetching changes from the remote Git repository
+ > git rev-parse --is-inside-work-tree # timeout=10
+ > git config remote.origin.url https://github.com/vivra-git/spring-petclinic.git # timeout=10
+Fetching upstream changes from https://github.com/vivra-git/spring-petclinic.git
+ > git --version # timeout=10
+ > git fetch --tags --progress -- https://github.com/vivra-git/spring-petclinic.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Checking out Revision 5ac94a928d37ef8d17637d3720a17947f72543d3 (refs/remotes/origin/master)
+Commit message: "Update Jenkinsfile"
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 5ac94a928d37ef8d17637d3720a17947f72543d3 # timeout=10
+ > git rev-list --no-walk 6704b61070521e2d8adb454274de8fb32974eb31 # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Tool Install)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Checkout)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] git
+No credentials specified
+Fetching changes from the remote Git repository
+Checking out Revision 5ac94a928d37ef8d17637d3720a17947f72543d3 (refs/remotes/origin/master)
+Commit message: "Update Jenkinsfile"
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
+ > git rev-parse --is-inside-work-tree # timeout=10
+ > git config remote.origin.url https://github.com/vivra-git/spring-petclinic.git # timeout=10
+Fetching upstream changes from https://github.com/vivra-git/spring-petclinic.git
+ > git --version # timeout=10
+ > git fetch --tags --progress -- https://github.com/vivra-git/spring-petclinic.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 5ac94a928d37ef8d17637d3720a17947f72543d3 # timeout=10
+ > git branch -a -v --no-abbrev # timeout=10
+ > git branch -D master # timeout=10
+ > git checkout -b master 5ac94a928d37ef8d17637d3720a17947f72543d3 # timeout=10
++ mvn clean compile
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------< org.springframework.samples:spring-petclinic >------------
+[INFO] Building petclinic 2.1.0.BUILD-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ spring-petclinic ---
+[INFO] Deleting /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:prepare-agent (default) @ spring-petclinic ---
+[INFO] argLine set to -javaagent:/home/ubuntu/.m2/repository/org/jacoco/org.jacoco.agent/0.8.2/org.jacoco.agent-0.8.2-runtime.jar=destfile=/home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target/jacoco.exec
+[INFO] 
+[INFO] --- git-commit-id-plugin:2.2.5:revision (default) @ spring-petclinic ---
+[INFO] dotGitDirectory /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/.git
+[INFO] git.build.user.name 
+[INFO] git.build.user.email 
+[INFO] Using environment variable based branch name. GIT_BRANCH = origin/master
+[INFO] git.branch origin/master
+[INFO] --always = true
+[INFO] --dirty = -dirty
+[INFO] --abbrev = 7
+[INFO] Tag refs [[Ref[refs/tags/1.5.x=c36452a2c34443ae26b4ecbba4f149906af14717]]]
+[INFO] Created map: [{}]
+[INFO] evalCommit is [5ac94a928d37ef8d17637d3720a17947f72543d3]
+[INFO] git.commit.id.describe 5ac94a9
+[INFO] git.commit.id 5ac94a928d37ef8d17637d3720a17947f72543d3
+[INFO] git.commit.id.abbrev 5ac94a9
+[INFO] git.dirty false
+[INFO] git.commit.user.name vivra-git
+[INFO] git.commit.user.email 67801791+vivra-git@users.noreply.github.com
+[INFO] git.commit.message.full Update Jenkinsfile
+[INFO] git.commit.message.short Update Jenkinsfile
+[INFO] git.commit.time 2020-07-25T13:10:10+0000
+[INFO] git.remote.origin.url https://github.com/vivra-git/spring-petclinic.git
+[INFO] git.tags 
+[INFO] evalCommit is [5ac94a928d37ef8d17637d3720a17947f72543d3]
+[INFO] Tag refs [[Ref[refs/tags/1.5.x=c36452a2c34443ae26b4ecbba4f149906af14717]]]
+[INFO] Created map: [{}]
+[INFO] git.closest.tag.name 
+[INFO] evalCommit is [5ac94a928d37ef8d17637d3720a17947f72543d3]
+[INFO] Tag refs [[Ref[refs/tags/1.5.x=c36452a2c34443ae26b4ecbba4f149906af14717]]]
+[INFO] Created map: [{}]
+[INFO] git.closest.tag.commit.count 
+[INFO] git.total.commit.count 740
+[INFO] git.build.time 2020-07-25T13:14:00+0000
+[INFO] git.build.version 2.1.0.BUILD-SNAPSHOT
+[INFO] git.build.host ip-172-31-12-225
+[INFO] git.build.number 10
+[INFO] git.commit.id.describe-short 5ac94a9
+[INFO] found property git.tags
+[INFO] found property git.closest.tag.commit.count
+[INFO] found property git.build.version
+[INFO] found property git.commit.user.name
+[INFO] found property git.commit.id.abbrev
+[INFO] found property git.branch
+[INFO] found property git.build.host
+[INFO] found property git.commit.id.describe-short
+[INFO] found property git.total.commit.count
+[INFO] found property git.build.number
+[INFO] found property git.commit.id.describe
+[INFO] found property git.build.user.email
+[INFO] found property git.commit.id
+[INFO] found property git.commit.message.short
+[INFO] found property git.commit.user.email
+[INFO] found property git.closest.tag.name
+[INFO] found property git.commit.time
+[INFO] found property git.build.time
+[INFO] found property git.build.user.name
+[INFO] found property git.dirty
+[INFO] found property git.commit.message.full
+[INFO] found property git.remote.origin.url
+[INFO] Writing properties file to [/home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target/classes/git.properties] (for module petclinic)...
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.1.1.RELEASE:build-info (default) @ spring-petclinic ---
+[INFO] 
+[INFO] --- wro4j-maven-plugin:1.8.0:run (default) @ spring-petclinic ---
+[INFO] /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/src/main/less
+[INFO] Executing the mojo: 
+[INFO] Wro4j Model path: /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/src/main/wro/wro.xml
+[INFO] targetGroups: null
+[INFO] minimize: true
+[INFO] ignoreMissingResources: null
+[INFO] parallelProcessing: false
+[INFO] buildDirectory: /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target
+[INFO] destinationFolder: /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target
+[INFO] cssDestinationFolder: /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target/classes/static/resources/css
+[INFO] The following groups will be processed: [petclinic]
+[INFO] folder: /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target/classes/static/resources/css
+[INFO] processing group: petclinic.css
+[WARNING] Less warnings are:
+[WARNING] 10:1 Cannot link source map. Css result location is not know and could not be deduced from input less source..
+[INFO] file size: petclinic.css -> 152399 bytes
+[INFO] /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target/classes/static/resources/css/petclinic.css (152399 bytes)
+[INFO] folder: /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target
+[INFO] processing group: petclinic.js
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ spring-petclinic ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] Copying 35 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ spring-petclinic ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 25 source files to /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target/classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  18.903 s
+[INFO] Finished at: 2020-07-25T13:14:15Z
+[INFO] ------------------------------------------------------------------------
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
++ mvn clean compile
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------< org.springframework.samples:spring-petclinic >------------
+[INFO] Building petclinic 2.1.0.BUILD-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ spring-petclinic ---
+[INFO] Deleting /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:prepare-agent (default) @ spring-petclinic ---
+[INFO] argLine set to -javaagent:/home/ubuntu/.m2/repository/org/jacoco/org.jacoco.agent/0.8.2/org.jacoco.agent-0.8.2-runtime.jar=destfile=/home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target/jacoco.exec
+[INFO] 
+[INFO] --- git-commit-id-plugin:2.2.5:revision (default) @ spring-petclinic ---
+[INFO] dotGitDirectory /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/.git
+[INFO] git.build.user.name 
+[INFO] git.build.user.email 
+[INFO] Using environment variable based branch name. GIT_BRANCH = origin/master
+[INFO] git.branch origin/master
+[INFO] --always = true
+[INFO] --dirty = -dirty
+[INFO] --abbrev = 7
+[INFO] Tag refs [[Ref[refs/tags/1.5.x=c36452a2c34443ae26b4ecbba4f149906af14717]]]
+[INFO] Created map: [{}]
+[INFO] evalCommit is [5ac94a928d37ef8d17637d3720a17947f72543d3]
+[INFO] git.commit.id.describe 5ac94a9
+[INFO] git.commit.id 5ac94a928d37ef8d17637d3720a17947f72543d3
+[INFO] git.commit.id.abbrev 5ac94a9
+[INFO] git.dirty false
+[INFO] git.commit.user.name vivra-git
+[INFO] git.commit.user.email 67801791+vivra-git@users.noreply.github.com
+[INFO] git.commit.message.full Update Jenkinsfile
+[INFO] git.commit.message.short Update Jenkinsfile
+[INFO] git.commit.time 2020-07-25T13:10:10+0000
+[INFO] git.remote.origin.url https://github.com/vivra-git/spring-petclinic.git
+[INFO] git.tags 
+[INFO] evalCommit is [5ac94a928d37ef8d17637d3720a17947f72543d3]
+[INFO] Tag refs [[Ref[refs/tags/1.5.x=c36452a2c34443ae26b4ecbba4f149906af14717]]]
+[INFO] Created map: [{}]
+[INFO] git.closest.tag.name 
+[INFO] evalCommit is [5ac94a928d37ef8d17637d3720a17947f72543d3]
+[INFO] Tag refs [[Ref[refs/tags/1.5.x=c36452a2c34443ae26b4ecbba4f149906af14717]]]
+[INFO] Created map: [{}]
+[INFO] git.closest.tag.commit.count 
+[INFO] git.total.commit.count 740
+[INFO] git.build.time 2020-07-25T13:14:21+0000
+[INFO] git.build.version 2.1.0.BUILD-SNAPSHOT
+[INFO] git.build.host ip-172-31-12-225
+[INFO] git.build.number 10
+[INFO] git.commit.id.describe-short 5ac94a9
+[INFO] found property git.tags
+[INFO] found property git.closest.tag.commit.count
+[INFO] found property git.build.version
+[INFO] found property git.commit.user.name
+[INFO] found property git.commit.id.abbrev
+[INFO] found property git.branch
+[INFO] found property git.build.host
+[INFO] found property git.commit.id.describe-short
+[INFO] found property git.total.commit.count
+[INFO] found property git.build.number
+[INFO] found property git.commit.id.describe
+[INFO] found property git.build.user.email
+[INFO] found property git.commit.id
+[INFO] found property git.commit.message.short
+[INFO] found property git.commit.user.email
+[INFO] found property git.closest.tag.name
+[INFO] found property git.commit.time
+[INFO] found property git.build.time
+[INFO] found property git.build.user.name
+[INFO] found property git.dirty
+[INFO] found property git.commit.message.full
+[INFO] found property git.remote.origin.url
+[INFO] Writing properties file to [/home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target/classes/git.properties] (for module petclinic)...
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.1.1.RELEASE:build-info (default) @ spring-petclinic ---
+[INFO] 
+[INFO] --- wro4j-maven-plugin:1.8.0:run (default) @ spring-petclinic ---
+[INFO] /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/src/main/less
+[INFO] Executing the mojo: 
+[INFO] Wro4j Model path: /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/src/main/wro/wro.xml
+[INFO] targetGroups: null
+[INFO] minimize: true
+[INFO] ignoreMissingResources: null
+[INFO] parallelProcessing: false
+[INFO] buildDirectory: /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target
+[INFO] destinationFolder: /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target
+[INFO] cssDestinationFolder: /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target/classes/static/resources/css
+[INFO] The following groups will be processed: [petclinic]
+[INFO] folder: /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target/classes/static/resources/css
+[INFO] processing group: petclinic.css
+[WARNING] Less warnings are:
+[WARNING] 10:1 Cannot link source map. Css result location is not know and could not be deduced from input less source..
+[INFO] file size: petclinic.css -> 152399 bytes
+[INFO] /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target/classes/static/resources/css/petclinic.css (152399 bytes)
+[INFO] folder: /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target
+[INFO] processing group: petclinic.js
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ spring-petclinic ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] Copying 35 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ spring-petclinic ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 25 source files to /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target/classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.139 s
+[INFO] Finished at: 2020-07-25T13:14:34Z
+[INFO] ------------------------------------------------------------------------
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Package)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
++ mvn clean compile
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------< org.springframework.samples:spring-petclinic >------------
+[INFO] Building petclinic 2.1.0.BUILD-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ spring-petclinic ---
+[INFO] Deleting /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:prepare-agent (default) @ spring-petclinic ---
+[INFO] argLine set to -javaagent:/home/ubuntu/.m2/repository/org/jacoco/org.jacoco.agent/0.8.2/org.jacoco.agent-0.8.2-runtime.jar=destfile=/home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target/jacoco.exec
+[INFO] 
+[INFO] --- git-commit-id-plugin:2.2.5:revision (default) @ spring-petclinic ---
+[INFO] dotGitDirectory /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/.git
+[INFO] git.build.user.name 
+[INFO] git.build.user.email 
+[INFO] Using environment variable based branch name. GIT_BRANCH = origin/master
+[INFO] git.branch origin/master
+[INFO] --always = true
+[INFO] --dirty = -dirty
+[INFO] --abbrev = 7
+[INFO] Tag refs [[Ref[refs/tags/1.5.x=c36452a2c34443ae26b4ecbba4f149906af14717]]]
+[INFO] Created map: [{}]
+[INFO] evalCommit is [5ac94a928d37ef8d17637d3720a17947f72543d3]
+[INFO] git.commit.id.describe 5ac94a9
+[INFO] git.commit.id 5ac94a928d37ef8d17637d3720a17947f72543d3
+[INFO] git.commit.id.abbrev 5ac94a9
+[INFO] git.dirty false
+[INFO] git.commit.user.name vivra-git
+[INFO] git.commit.user.email 67801791+vivra-git@users.noreply.github.com
+[INFO] git.commit.message.full Update Jenkinsfile
+[INFO] git.commit.message.short Update Jenkinsfile
+[INFO] git.commit.time 2020-07-25T13:10:10+0000
+[INFO] git.remote.origin.url https://github.com/vivra-git/spring-petclinic.git
+[INFO] git.tags 
+[INFO] evalCommit is [5ac94a928d37ef8d17637d3720a17947f72543d3]
+[INFO] Tag refs [[Ref[refs/tags/1.5.x=c36452a2c34443ae26b4ecbba4f149906af14717]]]
+[INFO] Created map: [{}]
+[INFO] git.closest.tag.name 
+[INFO] evalCommit is [5ac94a928d37ef8d17637d3720a17947f72543d3]
+[INFO] Tag refs [[Ref[refs/tags/1.5.x=c36452a2c34443ae26b4ecbba4f149906af14717]]]
+[INFO] Created map: [{}]
+[INFO] git.closest.tag.commit.count 
+[INFO] git.total.commit.count 740
+[INFO] git.build.time 2020-07-25T13:14:40+0000
+[INFO] git.build.version 2.1.0.BUILD-SNAPSHOT
+[INFO] git.build.host ip-172-31-12-225
+[INFO] git.build.number 10
+[INFO] git.commit.id.describe-short 5ac94a9
+[INFO] found property git.tags
+[INFO] found property git.closest.tag.commit.count
+[INFO] found property git.build.version
+[INFO] found property git.commit.user.name
+[INFO] found property git.commit.id.abbrev
+[INFO] found property git.branch
+[INFO] found property git.build.host
+[INFO] found property git.commit.id.describe-short
+[INFO] found property git.total.commit.count
+[INFO] found property git.build.number
+[INFO] found property git.commit.id.describe
+[INFO] found property git.build.user.email
+[INFO] found property git.commit.id
+[INFO] found property git.commit.message.short
+[INFO] found property git.commit.user.email
+[INFO] found property git.closest.tag.name
+[INFO] found property git.commit.time
+[INFO] found property git.build.time
+[INFO] found property git.build.user.name
+[INFO] found property git.dirty
+[INFO] found property git.commit.message.full
+[INFO] found property git.remote.origin.url
+[INFO] Writing properties file to [/home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target/classes/git.properties] (for module petclinic)...
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.1.1.RELEASE:build-info (default) @ spring-petclinic ---
+[INFO] 
+[INFO] --- wro4j-maven-plugin:1.8.0:run (default) @ spring-petclinic ---
+[INFO] /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/src/main/less
+[INFO] Executing the mojo: 
+[INFO] Wro4j Model path: /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/src/main/wro/wro.xml
+[INFO] targetGroups: null
+[INFO] minimize: true
+[INFO] ignoreMissingResources: null
+[INFO] parallelProcessing: false
+[INFO] buildDirectory: /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target
+[INFO] destinationFolder: /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target
+[INFO] cssDestinationFolder: /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target/classes/static/resources/css
+[INFO] The following groups will be processed: [petclinic]
+[INFO] folder: /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target/classes/static/resources/css
+[INFO] processing group: petclinic.css
+[WARNING] Less warnings are:
+[WARNING] 10:1 Cannot link source map. Css result location is not know and could not be deduced from input less source..
+[INFO] file size: petclinic.css -> 152399 bytes
+[INFO] /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target/classes/static/resources/css/petclinic.css (152399 bytes)
+[INFO] folder: /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target
+[INFO] processing group: petclinic.js
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ spring-petclinic ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] Copying 35 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ spring-petclinic ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 25 source files to /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target/classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.309 s
+[INFO] Finished at: 2020-07-25T13:14:53Z
+[INFO] ------------------------------------------------------------------------
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Reports)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
++ mvn clean compile
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------< org.springframework.samples:spring-petclinic >------------
+[INFO] Building petclinic 2.1.0.BUILD-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ spring-petclinic ---
+[INFO] Deleting /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:prepare-agent (default) @ spring-petclinic ---
+[INFO] argLine set to -javaagent:/home/ubuntu/.m2/repository/org/jacoco/org.jacoco.agent/0.8.2/org.jacoco.agent-0.8.2-runtime.jar=destfile=/home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target/jacoco.exec
+[INFO] 
+[INFO] --- git-commit-id-plugin:2.2.5:revision (default) @ spring-petclinic ---
+[INFO] dotGitDirectory /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/.git
+[INFO] git.build.user.name 
+[INFO] git.build.user.email 
+[INFO] Using environment variable based branch name. GIT_BRANCH = origin/master
+[INFO] git.branch origin/master
+[INFO] --always = true
+[INFO] --dirty = -dirty
+[INFO] --abbrev = 7
+[INFO] Tag refs [[Ref[refs/tags/1.5.x=c36452a2c34443ae26b4ecbba4f149906af14717]]]
+[INFO] Created map: [{}]
+[INFO] evalCommit is [5ac94a928d37ef8d17637d3720a17947f72543d3]
+[INFO] git.commit.id.describe 5ac94a9
+[INFO] git.commit.id 5ac94a928d37ef8d17637d3720a17947f72543d3
+[INFO] git.commit.id.abbrev 5ac94a9
+[INFO] git.dirty false
+[INFO] git.commit.user.name vivra-git
+[INFO] git.commit.user.email 67801791+vivra-git@users.noreply.github.com
+[INFO] git.commit.message.full Update Jenkinsfile
+[INFO] git.commit.message.short Update Jenkinsfile
+[INFO] git.commit.time 2020-07-25T13:10:10+0000
+[INFO] git.remote.origin.url https://github.com/vivra-git/spring-petclinic.git
+[INFO] git.tags 
+[INFO] evalCommit is [5ac94a928d37ef8d17637d3720a17947f72543d3]
+[INFO] Tag refs [[Ref[refs/tags/1.5.x=c36452a2c34443ae26b4ecbba4f149906af14717]]]
+[INFO] Created map: [{}]
+[INFO] git.closest.tag.name 
+[INFO] evalCommit is [5ac94a928d37ef8d17637d3720a17947f72543d3]
+[INFO] Tag refs [[Ref[refs/tags/1.5.x=c36452a2c34443ae26b4ecbba4f149906af14717]]]
+[INFO] Created map: [{}]
+[INFO] git.closest.tag.commit.count 
+[INFO] git.total.commit.count 740
+[INFO] git.build.time 2020-07-25T13:15:00+0000
+[INFO] git.build.version 2.1.0.BUILD-SNAPSHOT
+[INFO] git.build.host ip-172-31-12-225
+[INFO] git.build.number 10
+[INFO] git.commit.id.describe-short 5ac94a9
+[INFO] found property git.tags
+[INFO] found property git.closest.tag.commit.count
+[INFO] found property git.build.version
+[INFO] found property git.commit.user.name
+[INFO] found property git.commit.id.abbrev
+[INFO] found property git.branch
+[INFO] found property git.build.host
+[INFO] found property git.commit.id.describe-short
+[INFO] found property git.total.commit.count
+[INFO] found property git.build.number
+[INFO] found property git.commit.id.describe
+[INFO] found property git.build.user.email
+[INFO] found property git.commit.id
+[INFO] found property git.commit.message.short
+[INFO] found property git.commit.user.email
+[INFO] found property git.closest.tag.name
+[INFO] found property git.commit.time
+[INFO] found property git.build.time
+[INFO] found property git.build.user.name
+[INFO] found property git.dirty
+[INFO] found property git.commit.message.full
+[INFO] found property git.remote.origin.url
+[INFO] Writing properties file to [/home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target/classes/git.properties] (for module petclinic)...
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.1.1.RELEASE:build-info (default) @ spring-petclinic ---
+[INFO] 
+[INFO] --- wro4j-maven-plugin:1.8.0:run (default) @ spring-petclinic ---
+[INFO] /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/src/main/less
+[INFO] Executing the mojo: 
+[INFO] Wro4j Model path: /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/src/main/wro/wro.xml
+[INFO] targetGroups: null
+[INFO] minimize: true
+[INFO] ignoreMissingResources: null
+[INFO] parallelProcessing: false
+[INFO] buildDirectory: /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target
+[INFO] destinationFolder: /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target
+[INFO] cssDestinationFolder: /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target/classes/static/resources/css
+[INFO] The following groups will be processed: [petclinic]
+[INFO] folder: /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target/classes/static/resources/css
+[INFO] processing group: petclinic.css
+[WARNING] Less warnings are:
+[WARNING] 10:1 Cannot link source map. Css result location is not know and could not be deduced from input less source..
+[INFO] file size: petclinic.css -> 152399 bytes
+[INFO] /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target/classes/static/resources/css/petclinic.css (152399 bytes)
+[INFO] folder: /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target
+[INFO] processing group: petclinic.js
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ spring-petclinic ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] Copying 35 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ spring-petclinic ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 25 source files to /home/ubuntu/workspace/T29to32-DeclarativePetClinic@2/target/classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.471 s
+[INFO] Finished at: 2020-07-25T13:15:12Z
+[INFO] ------------------------------------------------------------------------
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
