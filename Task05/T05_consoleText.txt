@@ -1,0 +1,27 @@
+Started by user admin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/HelloWorldJavaT5
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/AnjuMeleth/hello-world-java.git
+ > git init /var/lib/jenkins/workspace/HelloWorldJavaT5 # timeout=10
+Fetching upstream changes from https://github.com/AnjuMeleth/hello-world-java.git
+ > git --version # timeout=10
+ > git fetch --tags --progress -- https://github.com/AnjuMeleth/hello-world-java.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/AnjuMeleth/hello-world-java.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/AnjuMeleth/hello-world-java.git # timeout=10
+Fetching upstream changes from https://github.com/AnjuMeleth/hello-world-java.git
+ > git fetch --tags --progress -- https://github.com/AnjuMeleth/hello-world-java.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 33b21a9a36f57b76ff1a9df7188bbd457991cad8 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 33b21a9a36f57b76ff1a9df7188bbd457991cad8 # timeout=10
+Commit message: "updated README.md on 18/07/2020"
+First time build. Skipping changelog.
+[HelloWorldJavaT5] $ /bin/sh -xe /tmp/jenkins4438320938784203301.sh
++ javac HelloWorld.java
++ java HelloWorld
+Hello world!
+Finished: SUCCESS
